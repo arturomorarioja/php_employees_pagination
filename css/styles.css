@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+
+:root {
+    --colorTextPrimary: black;
+    --colorTextSecondary: floralwhite;
+    --colorBgHeader: #20408A;
+    --colorBgNav: rgb(205, 235, 246);
+    --colorBgTable: brown;
+
+    --fontMain: 'Raleway', Arial, Helvetica, sans-serif;
+    --fontData: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fontMain);
+}
+
+header {
+    padding: 0.5rem 0 0.5rem 2rem;
+    color: var(--colorTextSecondary);
+    background-color: var(--colorBgHeader);
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+nav#main > ul {
+    padding: 0.25rem 0;
+    background-color: var(--colorBgNav);
+    padding-inline-start: 0.5rem;
+    > li {
+        display: inline;
+        padding-right: 1rem;
+        font-weight: bold;
+    }
+}
+
+main {
+    padding: 0.5rem;
+    line-height: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+nav#pagination {
+    margin: 0.5rem 0;
+    a {
+        background-color: var(--colorBgNav);
+        margin-right: 0.5rem;
+        padding: 0.25rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.25rem 0 0.25rem 0;
+    color: var(--colorTextSecondary);
+    background-color: var(--colorBgHeader);
+    text-align: center;
+}
+
+form {
+    fieldset {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    button[type="submit"] {
+        margin-top: 0.5rem;
+        padding: 0 0.5rem;
+        border: solid thin var(--colorTextPrimary);
+        border-radius: 0.25rem;
+        font-size: 1rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--colorBgHeader);
+    &:hover {
+        font-weight: bold;
+    }
+    &.header {
+        color: var(--colorTextSecondary);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+table {
+    border-spacing: 0;
+    font-family: var(--fontData);
+    tr {
+        margin: 0;
+        padding: 0;
+    }
+    td, th {
+        border: solid thin var(--colorTextPrimary);
+        padding: 0 0.5rem;
+    }
+    th {
+        background-color: var(--colorBgTable);
+        text-align: left;
+    }
+    td.number {
+        text-align: right;
+    }
+}
